@@ -1,0 +1,30 @@
+[project]
+name = "rye"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Alignment-Lab-AI", email = "autometa@alignmentlab.ai" }
+]
+dependencies = [
+    "pip>=24.0",
+    "yt-dlp>=2023.12.30",
+]
+readme = "README.md"
+requires-python = ">= 3.12"
+
+[project.scripts]
+hello = "rye:hello"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/rye"]
